@@ -27,13 +27,3 @@ Este repositorio contiene una aplicación web que implementa un sistema de inici
 - Los registros no desaparecerán al recargar la página. Sin embargo, si el usuario cierra sesión, se limpiarán todos los registros para que, al volver a iniciar sesión, la grilla esté vacía.
 
 - Después de ingresar o editar registros, el formulario se limpia automáticamente para facilitar la entrada de nuevos datos.
-
-## Tecnologías Utilizadas
-
-La aplicación se ha desarrollado utilizando tecnologías web estándar, como HTML, CSS y JavaScript. La persistencia de datos se puede lograr mediante el almacenamiento local del navegador o mediante la integración con una base de datos en el lado del servidor, según las necesidades del proyecto.
-
-## Notas Adicionales
-
-Este proyecto es un ejercicio de implementación y no se ha conectado a una base de datos real ni se ha implementado un servidor backend. La seguridad y la autenticación real deben abordarse en un entorno de producción de manera más robusta.
-
-¡Gracias por revisar este proyecto! Siéntete libre de clonar y probar el código en tu entorno local para explorar su funcionamiento. Si tienes alguna pregunta o sugerencia, no dudes en abrir un problema o contactar al desarrollador.
