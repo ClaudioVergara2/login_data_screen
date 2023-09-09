@@ -28,7 +28,7 @@ Este repositorio contiene una aplicación web que implementa un sistema de inici
 
 - Después de ingresar o editar registros, el formulario se limpia automáticamente para facilitar la entrada de nuevos datos.
 
-## Vista
+## Vistas
 
 ![Vista](https://github.com/ClaudioVergara2/login_data_screen/blob/main/VistaLogin.jpg)
 
