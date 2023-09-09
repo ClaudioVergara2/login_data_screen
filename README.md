@@ -1,30 +1,39 @@
-README - Sistema de Inicio de Sesión y Registro de Datos
-Este repositorio contiene un ejercicio de implementación de un sistema de inicio de sesión y registro de datos, desarrollado en un entorno web. El sistema consta de dos pantallas principales: la pantalla de inicio de sesión y la pantalla de datos. A continuación, se detalla el funcionamiento y los requisitos del sistema:
+# Sistema de Inicio de Sesión y Registro de Datos
 
-Pantalla de Inicio de Sesión
-La pantalla de inicio de sesión permite a los usuarios ingresar al sistema. Aquí están las funcionalidades clave:
+Este repositorio contiene una aplicación web que implementa un sistema de inicio de sesión y un formulario de registro de datos. El sistema consta de dos pantallas principales: la pantalla de inicio de sesión y la pantalla de datos.
 
-Validación de Campos Vacíos: Si tanto el campo de usuario como el de contraseña se encuentran vacíos, el sistema mostrará un mensaje de error indicando que "Usuario no puede encontrarse vacío" o "Contraseña no puede encontrarse vacía".
+## Pantalla de Inicio de Sesión
 
-Validación de Credenciales: Una vez que se ha confirmado que los campos no están vacíos, el sistema consultará una matriz bidimensional de usuarios y contraseñas para verificar las credenciales. Si las credenciales son incorrectas, se mostrará un mensaje que indica "Usuario no se encuentra en el sistema" o "Contraseña incorrecta", según corresponda. Uno de los usuarios predefinidos debe ser "ADMIN" con contraseña "ADMIN".
+- Si los campos de usuario y contraseña están vacíos, se mostrará un mensaje de error indicando que "Usuario no puede encontrarse vacío" o "Contraseña no puede encontrarse vacía".
 
-Redireccionamiento Exitoso: En caso de una validación exitosa, el usuario será redirigido a la pantalla de datos.
+- Una vez validados los campos, se verificará si el usuario y la contraseña son correctos utilizando una matriz bidimensional de usuarios y contraseñas. Si las credenciales son incorrectas, se mostrará un mensaje que indica "Usuario no se encuentra en el sistema" o "Contraseña incorrecta". Uno de los usuarios predefinidos es "ADMIN" con la contraseña "ADMIN".
 
-Pantalla de Datos
-La pantalla de datos muestra información y permite la interacción con los registros. Aquí están las funcionalidades clave:
+- En caso de una validación exitosa, el usuario será redirigido a la pantalla de datos.
 
-Visualización de Usuario: En la parte superior de la pantalla, se muestra el nombre de usuario que ha ingresado.
+## Pantalla de Datos
 
-Cerrar Sesión: Se proporciona la opción de "Cerrar Sesión", que solicitará una confirmación antes de redirigir al usuario a la pantalla de inicio de sesión.
+- En la parte superior de la pantalla, se muestra el nombre de usuario que ha iniciado sesión.
 
-Validación de Acceso: Si un usuario intenta acceder directamente a la pantalla de datos sin haber iniciado sesión, se redirigirá automáticamente a la pantalla de inicio de sesión.
+- Se proporciona la opción "Cerrar Sesión", que solicitará una confirmación antes de redirigir al usuario a la pantalla de inicio de sesión.
 
-Formulario de Registro de Datos: Se presenta un formulario que incluye los siguientes campos obligatorios: Nombres, Apellidos, Fecha de Nacimiento y Correo. Además, se realiza una validación de formato en el campo de correo, asegurando que contenga "@".
+- Si un usuario intenta acceder directamente a la pantalla de datos sin haber iniciado sesión, se redirigirá automáticamente a la pantalla de inicio de sesión.
 
-Grilla de Datos: Los datos ingresados se muestran en una grilla que incluye los siguientes campos: ID, NOMBRE COMPLETO, FECHA DE NACIMIENTO, EDAD, CORREO y ACCIÓN.
+- El formulario de registro de datos incluye campos obligatorios: Nombres, Apellidos, Fecha de Nacimiento y Correo. Se realiza una validación de formato en el campo de correo para asegurarse de que contenga "@".
 
-Acciones de Edición y Eliminación: Cada fila de la grilla tiene dos botones de acción: "Editar" y "Eliminar". Al hacer clic en "Editar", se permite editar los registros y actualizar la grilla. Al hacer clic en "Eliminar", se muestra una confirmación antes de eliminar el registro de la grilla.
+- Los datos ingresados se muestran en una grilla que incluye los campos: ID, NOMBRE COMPLETO, FECHA DE NACIMIENTO, EDAD, CORREO y ACCIÓN.
 
-Persistencia de Datos: Los registros no desaparecerán al recargar la página. Sin embargo, si el usuario cierra sesión, se limpiarán todos los registros para que, al volver a iniciar sesión, la grilla esté vacía.
+- Cada fila de la grilla tiene dos botones de acción: "Editar" y "Eliminar". Al hacer clic en "Editar", se permite editar los registros y actualizar la grilla. Al hacer clic en "Eliminar", se muestra una confirmación antes de eliminar el registro de la grilla.
 
-Limpieza del Formulario: Después de ingresar o editar registros, el formulario se limpia automáticamente para facilitar la entrada de nuevos datos.
+- Los registros no desaparecerán al recargar la página. Sin embargo, si el usuario cierra sesión, se limpiarán todos los registros para que, al volver a iniciar sesión, la grilla esté vacía.
+
+- Después de ingresar o editar registros, el formulario se limpia automáticamente para facilitar la entrada de nuevos datos.
+
+## Tecnologías Utilizadas
+
+La aplicación se ha desarrollado utilizando tecnologías web estándar, como HTML, CSS y JavaScript. La persistencia de datos se puede lograr mediante el almacenamiento local del navegador o mediante la integración con una base de datos en el lado del servidor, según las necesidades del proyecto.
+
+## Notas Adicionales
+
+Este proyecto es un ejercicio de implementación y no se ha conectado a una base de datos real ni se ha implementado un servidor backend. La seguridad y la autenticación real deben abordarse en un entorno de producción de manera más robusta.
+
+¡Gracias por revisar este proyecto! Siéntete libre de clonar y probar el código en tu entorno local para explorar su funcionamiento. Si tienes alguna pregunta o sugerencia, no dudes en abrir un problema o contactar al desarrollador.
