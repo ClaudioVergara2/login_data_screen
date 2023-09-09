@@ -18,7 +18,7 @@ namespace Evaluacion1.Controllers
             return View();
         }
 
-        public IActionResult Privaty()
+        public IActionResult DataScreen()
         {
             return View();
         }

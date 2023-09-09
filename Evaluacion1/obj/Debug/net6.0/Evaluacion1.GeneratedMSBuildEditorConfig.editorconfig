@@ -16,12 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\User\source\repos\Evaluacion1\Evaluacion1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/User/source/repos/Evaluacion1/Evaluacion1/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/User/source/repos/Evaluacion1/Evaluacion1/Views/Home/DataScreen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYXRhU2NyZWVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/Evaluacion1/Evaluacion1/Views/Home/Privaty.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YXR5LmNzaHRtbA==
+[C:/Users/User/source/repos/Evaluacion1/Evaluacion1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/source/repos/Evaluacion1/Evaluacion1/Views/Shared/Error.cshtml]
