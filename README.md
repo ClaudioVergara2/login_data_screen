@@ -27,9 +27,3 @@ Este repositorio contiene una aplicación web que implementa un sistema de inici
 - Los registros no desaparecerán al recargar la página. Sin embargo, si el usuario cierra sesión, se limpiarán todos los registros para que, al volver a iniciar sesión, la grilla esté vacía.
 
 - Después de ingresar o editar registros, el formulario se limpia automáticamente para facilitar la entrada de nuevos datos.
-
-## Vistas
-
-![Vista](https://github.com/ClaudioVergara2/login_data_screen/blob/main/VistaLogin.jpg)
-
-![Vista](https://github.com/ClaudioVergara2/login_data_screen/blob/main/VistaDataScreen.jpg)
