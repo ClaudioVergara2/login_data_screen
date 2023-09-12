@@ -8,6 +8,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--VALIDACION-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        function ingresar() {
+            var usuario = $("#usuario").val();
+            var contraseña = $("#contraseña").val();
+            if (usuario == "") {
+                Swal.fire(
+                    'Alerta',
+                    'Usuario no puede encontrarse vacío',
+                    'warning'
+                )
+            } else if (contraseña == "") {
+                Swal.fire(
+                    'Alerta',
+                    'Contraseña no puede encontrarse vacío',
+                    'warning'
+                )
+            }else{
+                window.location.href = '@Url.Action("DataScreen", "Home")';
+            }
+        }
+        var login = [{usuario: "ADMIN", contraseña: "ADMIN"},{usuario: "Pedro", contraseña: "123456"}];
+    </script>
 </head>
 <body>
      <div class="container">
@@ -23,14 +47,14 @@
                                         </div>
                                         <form class="user">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control-user" placeholder="Usuario">
+                                                <input id="usuario" type="text" class="form-control form-control-user" placeholder="Usuario">
                                             </div>
                                             <br>
                                             <div class="form-group">
-                                                <input type="password" class="form-control form-control-user" placeholder="Contraseña">
+                                                <input id="contraseña" type="password" class="form-control form-control-user" placeholder="Contraseña">
                                             </div>
                                             <br>
-                                            <a asp-controller="Home" asp-action="DataScreen" class="d-grid btn btn-primary btn-user btn-block">Ingresar</a>
+                                        <a class="d-grid btn btn-primary btn-user btn-block" onclick="ingresar()">Ingresar</a>
                                         </form>
                                     </div>
                                 </div>

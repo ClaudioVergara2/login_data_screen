@@ -9,18 +9,15 @@ namespace Evaluacion1.Models
         public DateTime fechaNacimiento { get; set; }
         public string? correo { get; set; }
 
-        public int Edad
+        public int Edad()
         {
-            get
+            DateTime hoy = DateTime.Now;
+            int edad = hoy.Year - fechaNacimiento.Year;
+            if (hoy.Month < fechaNacimiento.Month || (hoy.Month == fechaNacimiento.Month && hoy.Day < fechaNacimiento.Day))
             {
-                DateTime hoy = DateTime.Now;
-                int edad = hoy.Year - fechaNacimiento.Year;
-                if (hoy.Month < fechaNacimiento.Month || (hoy.Month == fechaNacimiento.Month && hoy.Day < fechaNacimiento.Day))
-                {
-                    edad--;
-                }
-                return edad;
+                edad--;
             }
+            return edad;
         }
     }
 }

@@ -32,19 +32,5 @@ namespace Evaluacion1.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-        //FUNCIONES
-        public IActionResult Agregar()
-        {
-            return View();
-        }
-        public IActionResult Editar()
-        {
-            return View();
-        }
-        public IActionResult Eliminar()
-        {
-            return View();
-        }
     }
 }
