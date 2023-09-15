@@ -29,3 +29,33 @@ C:\Users\User\source\repos\Evaluacion1\Evaluacion1\obj\Debug\net6.0\refint\Evalu
 C:\Users\User\source\repos\Evaluacion1\Evaluacion1\obj\Debug\net6.0\Evaluacion1.pdb
 C:\Users\User\source\repos\Evaluacion1\Evaluacion1\obj\Debug\net6.0\Evaluacion1.genruntimeconfig.cache
 C:\Users\User\source\repos\Evaluacion1\Evaluacion1\obj\Debug\net6.0\ref\Evaluacion1.dll
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\bin\Debug\net6.0\appsettings.json
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\bin\Debug\net6.0\Evaluacion1.staticwebassets.runtime.json
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\bin\Debug\net6.0\Evaluacion1.exe
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\bin\Debug\net6.0\Evaluacion1.deps.json
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\bin\Debug\net6.0\Evaluacion1.runtimeconfig.json
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\bin\Debug\net6.0\Evaluacion1.dll
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\bin\Debug\net6.0\Evaluacion1.pdb
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\Evaluacion1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\Evaluacion1.AssemblyInfoInputs.cache
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\Evaluacion1.AssemblyInfo.cs
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\Evaluacion1.csproj.CoreCompileInputs.cache
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\Evaluacion1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\Evaluacion1.RazorAssemblyInfo.cache
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\Evaluacion1.RazorAssemblyInfo.cs
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\staticwebassets\msbuild.Evaluacion1.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\staticwebassets\msbuild.build.Evaluacion1.props
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Evaluacion1.props
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Evaluacion1.props
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\scopedcss\bundle\Evaluacion1.styles.css
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\scopedcss\projectbundle\Evaluacion1.bundle.scp.css
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\Evaluacion1.dll
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\refint\Evaluacion1.dll
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\Evaluacion1.pdb
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\Evaluacion1.genruntimeconfig.cache
+C:\Users\jmuno\OneDrive\Escritorio\Semestre 8\Leng. de Programación Web II\login_data_screen\Evaluacion1\obj\Debug\net6.0\ref\Evaluacion1.dll
