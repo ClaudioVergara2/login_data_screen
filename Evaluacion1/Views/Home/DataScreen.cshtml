@@ -13,34 +13,62 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
      <!--VALIDACION-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        var arrCompleto = [];
+    <script>             
+        function edad(fechaNacimiento) {
+            var hoy = new Date();
+            var fechaNac = new Date(fechaNacimiento);
+            var edad = hoy.getFullYear() - fechaNac.getFullYear();
+            var mes = hoy.getMonth() - fechaNac.getMonth();
 
-        // Función para agregar un registro
+            if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
+                edad--;
+            }
+
+            return edad;
+        }
+
+        var arrCompleto = [];
         function agregar() {
             var nombres = $("#nombres").val();
             var apellidos = $("#apellidos").val();
             var fechaNacimiento = $("#fechaNacimiento").val();
             var correo = $("#correo").val();
+
             if (nombres == "") {
-                Swal.fire('Alerta', 'Nombres no puede estar vacío', 'warning');
+                Swal.fire(
+                    'Alerta', 
+                    'Nombres no puede estar vacío', 
+                    'warning'
+                );
             } else if (apellidos == "") {
-                Swal.fire('Alerta', 'Apellidos no puede estar vacío', 'warning');
+                Swal.fire(
+                    'Alerta', 
+                    'Apellidos no puede estar vacío', 
+                    'warning'
+                );
             } else if (fechaNacimiento == "") {
-                Swal.fire('Alerta', 'Fecha de nacimiento no puede estar vacío', 'warning');
+                Swal.fire(
+                    'Alerta', 
+                    'Fecha de nacimiento no puede estar vacío', 
+                    'warning'
+                );
             } else if (correo == "") {
-                Swal.fire('Alerta', 'Correo no puede estar vacío', 'warning');
+                Swal.fire(
+                    'Alerta', 
+                    'Correo no puede estar vacío', 
+                    'warning'
+                );
             } else {
                 var arr = [];
                 arr.push(nombres + ' ' + apellidos);
                 arr.push(fechaNacimiento);
-                arr.push(@respuesta.Edad());
+                arr.push(edad(fechaNacimiento));
                 arr.push(correo);
                 arrCompleto.push(arr);
 
-                generarTabla(); // Llama a la función para actualizar la tabla
+                generarTabla();
 
-                // LIMPIAR
+                // LIMPIAR EL FORM
                 $("#nombres").val("");
                 $("#apellidos").val("");
                 $("#fechaNacimiento").val("");
@@ -48,13 +76,23 @@
             }
         }
 
-        // Función para eliminar una fila
         function eliminarFila(index) {
-            arrCompleto.splice(index, 1);
-            generarTabla(); // Llama a la función para actualizar la tabla
+            Swal.fire({
+                title: '¿Desea eliminar este registro?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#28a745',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí, eliminar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    arrCompleto.splice(index, 1);
+                    generarTabla();
+                }
+            });
         }
 
-        // Función para cargar los datos de una fila en el formulario de edición
         function editarFila(index) {
             var data = arrCompleto[index];
             var nombreCompleto = data[0].split(' ');
@@ -62,13 +100,10 @@
             $("#apellidos").val(nombreCompleto[1]);
             $("#fechaNacimiento").val(data[1]);
             $("#correo").val(data[3]);
-
-            // Establecer el índice de edición y mostrar el botón "Actualizar"
             $("#indiceEdicion").val(index);
             $("#btnActualizar").show();
         }
 
-        //actualizar
         function actualizar() {
             var index = $("#indiceEdicion").val();
             var nombres = $("#nombres").val();
@@ -77,29 +112,32 @@
             var correo = $("#correo").val();
 
             if (nombres == "" || apellidos == "" || fechaNacimiento == "" || correo == "") {
-                Swal.fire('Alerta', 'Por favor, complete todos los campos', 'warning');
+                Swal.fire(
+                'Alerta', 
+                'Por favor, complete todos los campos', 
+                'warning'
+                );
             } else {
                 var arr = [];
                 arr.push(nombres + ' ' + apellidos);
                 arr.push(fechaNacimiento);
-                arr.push(@respuesta.Edad());
+                arr.push(edad(fechaNacimiento));
                 arr.push(correo);
-                arrCompleto[index] = arr; // Actualiza el registro existente en lugar de agregar uno nuevo
-                generarTabla(); // Llama a la función para actualizar la tabla
+                arrCompleto[index] = arr;
+                generarTabla();
 
-                // LIMPIAR
+                // LIMPIAR EL FORM
                 $("#nombres").val("");
                 $("#apellidos").val("");
                 $("#fechaNacimiento").val("");
                 $("#correo").val("");
 
-                // Ocultar el botón "Actualizar" y borrar el índice de edición
+                // SIRVE PARA OCULTAR EL BOTON DE ACTUALIZAR
                 $("#btnActualizar").hide();
                 $("#indiceEdicion").val("");
             }
         }
 
-        // Función para guardar los cambios después de la edición
         function guardarEdicion(index) {
             var nombres = $("#nombres").val();
             var apellidos = $("#apellidos").val();
@@ -107,17 +145,21 @@
             var correo = $("#correo").val();
 
             if (nombres == "" || apellidos == "" || fechaNacimiento == "" || correo == "") {
-                Swal.fire('Alerta', 'Por favor, complete todos los campos', 'warning');
+                Swal.fire(
+                    'Alerta', 
+                    'Por favor, complete todos los campos', 
+                    'warning'
+                );
             } else {
                 var arr = [];
                 arr.push(nombres + ' ' + apellidos);
                 arr.push(fechaNacimiento);
-                arr.push(@respuesta.Edad());
+                arr.push(edad(fechaNacimiento));
                 arr.push(correo);
                 arrCompleto[index] = arr;
-                generarTabla(); // Llama a la función para actualizar la tabla
+                generarTabla();
 
-                // LIMPIAR
+                // LIMPIAR EL FORM
                 $("#nombres").val("");
                 $("#apellidos").val("");
                 $("#fechaNacimiento").val("");
@@ -125,22 +167,24 @@
             }
         }
 
-        // Función para generar la tabla HTML
         function generarTabla() {
-    var tablaHtml = "";
-    for (var i = 0; i < arrCompleto.length; i++) {
-        tablaHtml += "<tr>";
-        tablaHtml += "<td>" + arrCompleto[i][0] + "</td>";
-        tablaHtml += "<td>" + arrCompleto[i][1] + "</td>";
-        tablaHtml += "<td>" + arrCompleto[i][2] + "</td>";
-        tablaHtml += "<td>" + arrCompleto[i][3] + "</td>";
-        tablaHtml += "<td><button class='btn btn-primary' onclick='editarFila(" + i + ");'>Editar</button> <button class='btn btn-danger' onclick='eliminarFila(" + i + ");'>Eliminar</button></td>";
-        tablaHtml += "</tr>";
+            var tablaHtml = "";
+            for (var i = 0; i < arrCompleto.length; i++) {
+                tablaHtml += "<tr>";
+                tablaHtml += "<td>" + arrCompleto[i][0] + "</td>";
+                var fechaNacimiento = new Date(arrCompleto[i][1]);
+                var dia = fechaNacimiento.getDate();
+                var mes = fechaNacimiento.getMonth() + 1;
+                var anio = fechaNacimiento.getFullYear();
+                var fechaFormateada = dia + "-" + (mes < 10 ? "0" : "") + mes + "-" + anio;
+                tablaHtml += "<td>" + fechaFormateada + "</td>";
+                tablaHtml += "<td>" + arrCompleto[i][2] + "</td>";
+                tablaHtml += "<td>" + arrCompleto[i][3] + "</td>";
+                tablaHtml += "<td><button class='btn btn-primary' onclick='editarFila(" + i + ");'>Editar</button> <button class='btn btn-danger' onclick='eliminarFila(" + i + ");'>Eliminar</button></td>";
+                tablaHtml += "</tr>";
     }
     $("#tablaHtml").html(tablaHtml);
 }
-
-        // Llama a la función para inicializar la tabla
         generarTabla();
     </script>
 </head>
@@ -148,6 +192,7 @@
     <!--NAV-->
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
+            <a class="navbar-brand" style="color: white;">Bienvenido : @ViewData["usuario"]</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             </div>
             <ul class="navbar-nav">
@@ -213,6 +258,7 @@
     <br />
     <hr class="container" />
     <br />
+    <!--TABLE-->
     <table class="table container" border='1' style='border-collapse' class='table'>
     <thead>
         <tr>
