@@ -4,6 +4,7 @@ namespace Evaluacion1.Models
 {
     public class Datos
     {
+        public int id { get; set; }
         public string? nombres { get; set; }
         public string? apellidos { get; set; }
         public DateTime fechaNacimiento { get; set; }

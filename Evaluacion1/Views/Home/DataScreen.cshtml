@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Datos";
 
-    var respuesta = (Datos)ViewData["respuesta"];
+   var respuesta = (Datos)ViewData["respuesta"];
 }
 <!DOCTYPE html>
 <html lang="es">
@@ -14,14 +14,12 @@
      <!--VALIDACION-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
-        //var arrCompleto = [];
+        var arrCompleto = [];
         function agregar() {
-            //var arr = [];
             var nombres = $("#nombres").val();
             var apellidos = $("#apellidos").val();
             var fechaNacimiento = $("#fechaNacimiento").val();
             var correo = $("#correo").val();
-
             if (nombres == "") {
                 Swal.fire(
                     'Alerta',
@@ -46,36 +44,32 @@
                     'Correo no puede estar vacio',
                     'warning'
                 );
-                return false;
             } else {
-                return true;
-               @*arr.push(nombres + ' ' + apellidos);
+                var arr = [];
+                arr.push(nombres + ' ' + apellidos);
                 arr.push(fechaNacimiento);
-                arr.push(Datos.Edad());
+                arr.push(@respuesta.Edad());
                 arr.push(correo);
                 arrCompleto.push(arr);
 
                 var tablaHtml = "";
-                tablaHtml += "<table border='1' style='border:collapse' class='table'>";
-                tablaHtml += "<tr>";
-                tablaHtml += "<td>NOMBRE COMPLETO</td>";
-                tablaHtml += "<td>FECHA NACIMIENTO</td>";
-                tablaHtml += "<td>EDAD</td>";
-                tablaHtml += "<td>Correo</td>";
-                tablaHtml += "<td>ACCIÓN</td>";
-                tablaHtml += "</tr>";
-
                 for (var i = 0; i < arrCompleto.length; i++) {
                     tablaHtml += "<tr>";
                     for (var j = 0; j < arrCompleto[i].length; j++) {
                         tablaHtml += "<td>" + arrCompleto[i][j] + "</td>";
                     }
+                    tablaHtml += "<td><button class='btn btn-primary'>Editar</button> <button class='btn btn-danger'>Eliminar</button></td>";
                     tablaHtml += "</tr>";
                 }
-                tablaHtml += "</table>";
-                $("#tablaHtml").html(tablaHtml);*@
+                $("#tablaHtml").html(tablaHtml);
+                // LIMPIAR
+                $("#nombres").val("");
+                $("#apellidos").val("");
+                $("#fechaNacimiento").val("");
+                $("#correo").val("");
+
+                return false;
             }
-           // return false;
         }
     </script>
 </head>
@@ -120,12 +114,12 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="col-md-6">
                 <label asp-for="nombres" class="form-label">Nombres</label>
-                <input asp-for="nombres" class="form-control" placeholder="Ingrese sus nombres"/>
+                <input asp-for="nombres" class="form-control" placeholder="Ingrese sus nombres" />
                 <span asp-validation-for="nombres" class="text-danger"></span>
             </div>
             <div class="col-md-6">
                 <label asp-for="apellidos" class="form-label">Apellidos</label>
-                <input asp-for="apellidos" class="form-control" placeholder="Ingrese sus apellidos"/>
+                <input asp-for="apellidos" class="form-control" placeholder="Ingrese sus apellidos" />
                 <span asp-validation-for="apellidos" class="text-danger"></span>
             </div>
             <div class="col-md-6">
@@ -139,44 +133,26 @@
                 <span asp-validation-for="correo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Agregar" class="btn btn-primary" onclick=" return agregar();" />
+                <input type="button" value="Agregar" class="btn btn-primary" onclick="agregar();" />
             </div>
         </form>
     </div>
     <br />
     <hr class="container" />
-    <br /><br />
-    <!--TABLE-->
-    @* <div class="container">
-        <div class="form-group">
-            <div id="tablaHtml"></div>
-        </div>
-    </div>*@
-   <table class="table container">
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">NOMBRE COMPLETO</th>
-                <th scope="col">FECHA NACIMIENTO</th>
-                <th scope="col">EDAD</th>
-                <th scope="col">CORREO</th>
-                <th scope="col">ACCIÓN</th>
-            </tr>
-        </thead>
-        <tbody>
-           <tr>
-                <th scope="row">1</th>
-                <td>@($"{respuesta.nombres} {respuesta.apellidos}")</td>
-                <td>@respuesta.fechaNacimiento.ToString("dd-MM-yyyy")</td>
-                <td>@respuesta.Edad()</td>
-                <td>@respuesta.correo</td>
-                <td>
-                    <button class="btn btn-primary">Editar</button>
-                    <button class="btn btn-danger">Eliminar</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <br />
+    <table class="table container" border='1' style='border-collapse' class='table'>
+    <thead>
+        <tr>
+            <th>NOMBRE COMPLETO</th>
+            <th>FECHA NACIMIENTO</th>
+            <th>EDAD</th>
+            <th>CORREO</th>
+            <th>ACCIÓN</th>
+        </tr>
+    </thead>
+    <tbody id="tablaHtml">
+    </tbody>
+</table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 </body>
 </html>

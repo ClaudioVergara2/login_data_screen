@@ -17,10 +17,9 @@ namespace Evaluacion1.Controllers
         {
             return View();
         }
-
         public IActionResult DataScreen(Datos datos)
         {
-            if(datos.nombres != "")
+            if (datos.nombres != "")
             {
                 ViewData["respuesta"] = datos;
             }
